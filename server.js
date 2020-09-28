@@ -21,10 +21,6 @@ const requestLogger = (request, response, next) => {
 
 app.use(requestLogger);
 
-app.get("/", (req, res) => {
-  res.send("Hello world");
-});
-
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 
